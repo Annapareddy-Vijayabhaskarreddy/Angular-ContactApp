@@ -1,0 +1,37 @@
+
+
+        <div class="container mt-5 " style="margin-left: 160px; ;"  >
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class=" bg-dark rounded-3 text-light mb-3 text-center py-3">
+                        <i class="fas fa-trash-alt  "></i>  Trash
+                    </div>
+                </div>
+              
+            </div>
+            <div class="row " >
+                <div class="col-md-4 offset-md-4"  *ngFor ="let item of getNoteTotrash"  >
+            <div class="card" style="width: 18rem;" style="padding:10; margin-bottom: 10px;  box-shadow: 4px 4px">
+                <div class="card-body" >
+                    <div style="float: right; ">
+                    <button (click)=Restore(item) class="btn " type="button " ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" class="bi bi-reply-fill" viewBox="0 0 16 16">
+                        <path d="M5.921 11.9L1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                      </svg></button> <br>                               
+                    <button (click)=DeletetrashNotesList(item) class="btn " type="button">
+                    <i class="fas fa-trash-alt  text-danger"></i></button></div>
+                  <p class="card-title">{{item.name}}</p> 
+                  <p class="card-text">{{item.phonenumber}}</p> 
+                  <p class="card-text">{{item.email}}</p> 
+                 
+                </div>
+            </div>
+            </div>   
+        </div> 
+    
+          
+       
+  </div>
+
+
+
+   
